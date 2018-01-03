@@ -1,0 +1,1 @@
+# Truncated Table Column

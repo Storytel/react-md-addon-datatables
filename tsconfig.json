@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist",
+    "allowJs": false,
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "ts-build",
+    "jsx": "react",
+    "strict": true,
+    "strictFunctionTypes": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "plugins": [
+      {
+        "name": "tslint-language-service",
+        "disableNoUnusedVariableRule": false,
+        "ignoreDefinitionFiles": true
+      }
+    ]
+  },
+  "include": [ "src/*.ts?" ]
+}

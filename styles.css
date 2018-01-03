@@ -1,0 +1,18 @@
+.truncated-table-column .md-tooltip {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  font-size: 13px;
+  padding: 15px;
+  width: 200px;
+  white-space: normal;
+  height: auto;
+}
+
+.truncated-table-column .md-tooltip--bottom {
+  bottom: 0;
+}
+
+.truncated-table-column .md-tooltip--top {
+  top: 0;
+}

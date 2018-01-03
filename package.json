@@ -1,0 +1,38 @@
+{
+  "name": "react-md-addon-truncatedtablecolumn",
+  "version": "1.0.0",
+  "description": "Table column for which automatically truncates and shows a tooltip if the content exceeds the width of the container",
+  "main": "./dist/react-md-addon-truncatedtablecolumn.js",
+  "types": "./index.d.ts",
+  "repository": "https://github.com/Storytel/frontend-commons",
+  "author": "Alexander Olsson <noseglid@gmail.com>",
+  "contributors": [
+    "Alexander Olsson <noseglid@gmail.com>",
+    "Dmytro Domshyn <dmytro.domshyn@storytel.com>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "yarn lint",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "yarn build"
+  },
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16",
+    "react-md": "^1"
+  },
+  "devDependencies": {
+    "@types/react": "~16.0.25",
+    "cross-env": "~5.1.1",
+    "react": "~16.2.0",
+    "react-dom": "~16.2.0",
+    "react-md": "~1.2.8",
+    "ts-loader": "~3.2.0",
+    "tslint": "~5.8.0",
+    "tslint-config-storytel": "~3.2.0",
+    "tslint-language-service": "~0.9.6",
+    "typescript": "~2.6.2",
+    "webpack": "~3.10.0"
+  }
+}
