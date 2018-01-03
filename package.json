@@ -1,6 +1,6 @@
 {
   "name": "react-md-addon-truncatedtablecolumn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Table column for which automatically truncates and shows a tooltip if the content exceeds the width of the container",
   "main": "./dist/react-md-addon-truncatedtablecolumn.js",
   "types": "./index.d.ts",
