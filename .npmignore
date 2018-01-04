@@ -1,9 +1,0 @@
-/tsconfig.json
-/tslint.json
-/yarn.lock
-*.ts
-*.tsx
-!*.d.ts
-/webpack.config.js
-/dist
-/dist-example
