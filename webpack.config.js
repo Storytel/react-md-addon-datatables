@@ -2,8 +2,7 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  name: 'react-md-addon-truncatedtablecolumn',
-  devtool: 'source-map',
+  name: 'react-md-addon-datatables',
   entry: path.resolve(__dirname, 'src', 'index.ts'),
   externals: {
     react: 'react',
@@ -15,8 +14,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: `react-md-addon-truncatedtablecolumn.js`,
-    library: 'react-md-addon-truncatedtablecolumn',
+    filename: `react-md-addon-datatables.js`,
+    library: 'react-md-addon-datatables',
     libraryTarget: 'umd',
     publicPath: '/dist/'
   },
@@ -25,13 +24,25 @@ module.exports = {
       {
         test: /\.tsx?$/,
         include: path.resolve(__dirname, 'src'),
-        use: 'ts-loader'
-      },
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile: 'tsconfig.json',
+              compilerOptions: {
+                declaration: true,
+                declarationDir: '.'
+              },
+            }
+          }
+        ]
+      }
     ]
   },
   plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true
-    }),
+    new UglifyJSPlugin(),
   ]
 };

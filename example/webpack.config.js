@@ -1,12 +1,10 @@
+const { DefinePlugin } = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
-  devtool: 'cheap-module-eval-source-map',
-  devServer: {
-    inline: true
-  },
+  devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-eval-source-map' : 'source-map',
   name: 'react-md-addon-datatables-example',
   entry: [
     path.join(__dirname, 'index.jsx')
@@ -23,22 +21,26 @@ const config = {
       {
         test: /\.jsx?$/,
         include: [ __dirname, path.join(__dirname, '..', 'src/') ],
-        loader: 'babel-loader'
+        use: 'babel-loader'
       },
       {
         test: /\.tsx?$/,
         include: path.resolve(__dirname, '../src'),
-        use: 'ts-loader'
+        use: [ 'babel-loader', 'ts-loader' ]
       },
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       },
 
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: 'head', title: 'react-md-addon-datatables' })
+    new HtmlWebpackPlugin({ inject: 'head', title: 'react-md-addon-datatables' }),
+    new UglifyJSPlugin(),
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    })
   ]
 };
 

@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": ".",
     "allowJs": false,
     "module": "esnext",
-    "target": "es5",
+    "target": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "outDir": "ts-build",
-    "jsx": "react",
+    "jsx": "preserve",
     "strict": true,
     "strictFunctionTypes": false,
     "noImplicitAny": true,
