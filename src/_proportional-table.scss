@@ -1,0 +1,13 @@
+@mixin proportional-table {
+  table-layout: fixed;
+  width: 100%;
+
+  thead tr,
+  tbody tr {
+    td,
+    th {
+      cursor: default;
+      padding-right: 14px; // This goes against material design (which requires at least 56px here), but that's just too much
+    }
+  }
+}

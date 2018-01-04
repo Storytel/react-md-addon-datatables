@@ -70,7 +70,7 @@ export class TruncatedTableColumn extends Component<TableColumnProps, State> {
     const { children, ...rest } = this.props;
     const { overflows } = this.state;
     const style: CSSProperties = overflows
-      ? { overflow: 'hidden', textOverflow: 'ellipsis' }
+      ? { overflow: 'hidden', textOverflow: 'ellipsis', textDecoration: 'underline dotted' }
       : { overflow: 'auto' };
 
     const columnProps: TableColumnProps = {

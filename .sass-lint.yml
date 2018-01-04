@@ -1,0 +1,8 @@
+options:
+  merge-default-rules: true
+  formatter: html
+files:
+  include: 'src/**/*.s+(a|c)ss'
+rules:
+  force-pseudo-nesting: 0
+  force-element-nesting: 0

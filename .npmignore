@@ -5,3 +5,5 @@
 *.tsx
 !*.d.ts
 /webpack.config.js
+/dist
+/dist-example
