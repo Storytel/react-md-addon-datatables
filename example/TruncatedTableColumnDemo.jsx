@@ -21,15 +21,12 @@ export default () => (
 
       <p>
         Content which are wider than the column will be <em>truncated</em> and have a <em>tooltip added</em>.
+        The tooltip includes the full text of the column.
       </p>
 
       <p>
         Since table columns naturally expand to the width of the content, you must set the widths
         (e.g. using the <code>propotional-table</code> and <code>column-widths</code> mixins) of the column.
-      </p>
-
-      <p>
-        <em>Resize your browser window</em> and hover the truncated columns to see the effect.
       </p>
 
       <Card tableCard={true}>
