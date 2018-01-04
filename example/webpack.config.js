@@ -7,7 +7,7 @@ const config = {
   devServer: {
     inline: true
   },
-  name: 'truncated-table-column-example',
+  name: 'react-md-addon-datatables-example',
   entry: [
     path.join(__dirname, 'index.jsx')
   ],
@@ -38,7 +38,7 @@ const config = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: 'head', title: 'Truncated Table Column' })
+    new HtmlWebpackPlugin({ inject: 'head', title: 'react-md-addon-datatables' })
   ]
 };
 
