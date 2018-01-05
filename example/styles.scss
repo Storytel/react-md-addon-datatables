@@ -1,9 +1,10 @@
 @import '../index.scss';
 @import '~react-md/src/scss/react-md';
+@import '~highlight.js/styles/monokai.css';
 
 $md-primary-color: $md-deep-orange-500;
 $md-secondary-color: $md-light-blue-a-400;
-$code-background-color: rgba($md-secondary-color, 0.3);
+$code-background-color: rgba($md-secondary-color, 0.2);
 
 @include react-md-everything();
 
@@ -48,9 +49,8 @@ code {
 
 .code {
   font-family: monaco, monospace;
-  padding: 10px 20px;
+  padding: 5px 20px;
   white-space: pre;
-  background: $code-background-color;
   margin-bottom: 10px;
 }
 
@@ -65,5 +65,5 @@ code {
   }
 
   @include proportional-table()
-  @include column-widths((1, 50, 20, 30))
+  @include column-widths((0, 60, 50))
 }

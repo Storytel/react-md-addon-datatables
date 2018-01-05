@@ -10,6 +10,36 @@ import {
   TableRow,
 } from 'react-md';
 
+const code =
+`
+import { TruncatedTableColumn } from 'react-md-addon-datatables';
+
+const Component = () => (
+  <DataTable baseId="example-table" uncheckedIcon={<FontIcon></FontIcon>}>
+    <TableBody>
+
+      <TableRow>
+        <TruncatedTableColumn>
+          He was swimming in a sea of other people’s expectations. Men had drowned in seas like that.
+        </TruncatedTableColumn>
+        <TruncatedTableColumn>
+          As the Wheel of Time turns, places wear many names. Men wear many names, many faces.
+          Different faces, but always the same man.
+          Yet no one knows the Great Pattern the Wheel weaves, or even the Pattern of an Age.
+          We can only watch, and study, and hope.
+        </TruncatedTableColumn>
+      </TableRow>
+
+      <TableRow>
+        <TruncatedTableColumn>Lorem ipsum dolor sit amet.</TruncatedTableColumn>
+        <TruncatedTableColumn>Lorem ipsum.</TruncatedTableColumn>
+      </TableRow>
+
+    </TableBody>
+  </DataTable>
+)
+`
+
 export default () => (
   <div>
     <h2>Truncated Table Column</h2>
@@ -29,32 +59,27 @@ export default () => (
         (e.g. using the <code>propotional-table</code> and <code>column-widths</code> mixins) of the column.
       </p>
 
+      <div className="code">{code}</div>
+
       <Card tableCard={true}>
         <DataTable baseId="example-table" uncheckedIcon={<FontIcon></FontIcon>}>
           <TableBody>
 
             <TableRow>
-              <TruncatedTableColumn>He was swimming in a sea of other people’s expectations. Men had drowned in seas like that.</TruncatedTableColumn>
-              <TruncatedTableColumn>As the Wheel of Time turns, places wear many names. Men wear many names, many faces. Different faces, but always the same man. Yet no one knows the Great Pattern the Wheel weaves, or even the Pattern of an Age. We can only watch, and study, and hope.</TruncatedTableColumn>
-              <TruncatedTableColumn>Blood and ashes.</TruncatedTableColumn>
+              <TruncatedTableColumn>
+                He was swimming in a sea of other people’s expectations. Men had drowned in seas like that.
+              </TruncatedTableColumn>
+              <TruncatedTableColumn>
+                As the Wheel of Time turns, places wear many names. Men wear many names, many faces.
+                Different faces, but always the same man.
+                Yet no one knows the Great Pattern the Wheel weaves, or even the Pattern of an Age.
+                We can only watch, and study, and hope.
+              </TruncatedTableColumn>
             </TableRow>
 
             <TableRow>
               <TruncatedTableColumn>Lorem ipsum dolor sit amet.</TruncatedTableColumn>
-              <TruncatedTableColumn>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, feugiat in ante id, venenatis suscipit erat. Phasellus tellus magna, sollicitudin et viverra quis, mattis vel massa. Maecenas fermentum tortor sed.</TruncatedTableColumn>
               <TruncatedTableColumn>Lorem ipsum.</TruncatedTableColumn>
-            </TableRow>
-
-            <TableRow>
-              <TruncatedTableColumn>Lorem ipsum.</TruncatedTableColumn>
-              <TruncatedTableColumn>Lorem ipsum.</TruncatedTableColumn>
-              <TruncatedTableColumn>Lorem ipsum.</TruncatedTableColumn>
-            </TableRow>
-
-            <TableRow>
-              <TruncatedTableColumn>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, feugiat in ante id, venenatis suscipit erat. Phasellus tellus magna, sollicitudin et viverra quis, mattis vel massa. Maecenas fermentum tortor sed.</TruncatedTableColumn>
-              <TruncatedTableColumn>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, feugiat in ante id, venenatis suscipit erat. Phasellus tellus magna, sollicitudin et viverra quis, mattis vel massa. Maecenas fermentum tortor sed.</TruncatedTableColumn>
-              <TruncatedTableColumn>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, feugiat in ante id, venenatis suscipit erat. Phasellus tellus magna, sollicitudin et viverra quis, mattis vel massa. Maecenas fermentum tortor sed.</TruncatedTableColumn>
             </TableRow>
 
           </TableBody>
