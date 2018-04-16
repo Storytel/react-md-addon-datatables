@@ -4,9 +4,13 @@
   opacity: 1;
   font-size: 13px;
   padding: 15px;
-  width: 200px;
+  width: inherit;
+  min-width: 200px;
   white-space: normal;
   height: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .truncated-table-column .md-tooltip--bottom {
