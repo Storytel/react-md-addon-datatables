@@ -7,7 +7,7 @@ export interface State {
 }
 
 export class TruncatedTableColumn extends Component<TableColumnProps, State> {
-  ref: HTMLDivElement;
+  ref?: HTMLDivElement;
 
   constructor(props: TableColumnProps) {
     super(props);
